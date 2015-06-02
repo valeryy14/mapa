@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+﻿<!DOCTYPE html> 
 <html>
 <head>
 <meta charset="utf-8">
@@ -87,7 +87,7 @@ $(document).on("pageinit","#Principal", function(e, data){
 	
 		$.ajax({
 		  type:"POST",
-		  url:" http://localhostvalery.260mb.net/editarServicios.php",
+		  url:"http://localhostvalery.260mb.net/editarServicios.php",
 		  data:"id="+id+"&nombre="+nom+"&direccion="+dir+"&giro="+giro+"&obtLatitud="+lat+"&obtLongitud="+lon,
 		  success: guardandoServicios		  		
 		});
@@ -110,7 +110,7 @@ $(document).on("pageinit","#Principal", function(e, data){
 	
 		$.ajax({
 		  type:"POST",
-		  url:" http://localhostvalery.260mb.net/eliminarServicios.php",
+		  url:"http://localhostvalery.260mb.net/eliminarServicios.php",
 		  data:"id="+id,
 		  success: eliminandoServicios		  		
 		});
@@ -139,7 +139,7 @@ $(document).on("pageinit","#Principal", function(e, data){
 	
 		$.ajax({
 		  type:"POST",
-		  url:" http://localhostvalery.260mb.net/guardarServicios.php",
+		  url:"http://localhostvalery.260mb.net/guardarServicios.php",
 		  data:"nombre="+nom+"&direccion="+dir+"&giro="+giro+"&obtLatitud="+lat+"&obtLongitud="+lon,
 		  success: guardandoServicios		  		
 		});
@@ -166,7 +166,7 @@ $(document).on("pageinit","#Principal", function(e, data){
 	options.params = params;
 
 	var ft = new FileTransfer();
-	ft.upload(foto," http://localhostvalery.260mb.net/upload.php",function(r){		
+	ft.upload(foto,"http://localhostvalery.260mb.net/upload.php",function(r){		
 		navigator.notification.confirm("El archivo: "+r.response,null, "Notificacion");
 	}, function(err){
 		navigator.notification.alert("Error: "+err.code+" detalle: "+err.response,null, "Error de Envío");
@@ -215,7 +215,7 @@ $(document).on("pageinit","#Principal", function(e, data){
 	    function exito(posic){	      	      	         	     
 	      $.ajax({
 		type:"POST",
-		url:"c http://localhostvalery.260mb.net/onsultaServ.php",
+		url:"http://localhostvalery.260mb.net/onsultaServ.php",
 		data:"",
 		success: serviciosConsultados
 	      });	     
